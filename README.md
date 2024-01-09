@@ -1,30 +1,23 @@
-# React + TypeScript + Vite
+# React Dt Money
+Um projeto simples para controle de entradas e saídas de dinheiro.
+## Iniciar projeto
+Para iniciar o projeto, basta clonar o repositório e executar os seguintes comandos:
+```bash
+# Instalar as dependências
+$ npm install
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Iniciar o back-end (json-server)
+$ npm run dev:server
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+# Iniciar o front-end na porta 5173
+$ npm run dev
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Principais conceitos aprendidos
+1. Criação de um [hook customizado](https://github.com/brayan-jordan/react-dt-money/blob/master/src/hooks/useSummary.ts) para melhorar a semântica do código.
+2. Utilização da biblioteca [use-context-selector](https://www.npmjs.com/package/use-context-selector) para lidar com contextos de forma mais eficiente e evitar renderizações desnecesárias.
+3. Utilização do hook [useMemo](https://react.dev/reference/react) para armazenar valores que não precisam ser recalculados a cada renderização.
+4. Utilização da biblioteca [radix-ui](https://www.radix-ui.com/) para facilitar a implementação de componentes como modais, popover, dropdown (visando a facilidade de implementação de componentes acessíveis).
+   
+## Imagens do projeto
+![Imagem da home](https://github.com/brayan-jordan/react-dt-money/blob/master/docs/home.png)
+![Imagem do modal de criação de nova transação](https://github.com/brayan-jordan/react-dt-money/blob/master/docs/new-transaction.png)
